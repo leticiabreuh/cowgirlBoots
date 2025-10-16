@@ -1,0 +1,52 @@
+* {
+    margin: 0; /* Remove margens padrão de todos os elementos */
+    padding: 0; /* Remove espaçamentos internos padrão */
+    box-sizing: border-box; /* Faz o padding e border entrarem no tamanho total do elemento */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Define fonte padrão da página */
+}
+
+header {
+    position: relative; /* Permite posicionamento de elementos filhos com absolute */
+    display: flex; /* Ativa flexbox para alinhar elementos */
+    flex-direction: column; /* Organiza filhos em coluna */
+    align-items: center; /* Centraliza elementos horizontalmente */
+    /*background: linear-gradient(180deg, #d4a574 0%, #8b6f47 100%); /* Degradê de cima para baixo */
+    padding-bottom: 36%; /* Espaço interno inferior */
+}
+
+.logo img {
+    max-width: 250px; /* Largura máxima do logo */
+    height: auto; /* Mantém proporção da imagem */
+    display: block; /* Remove espaço em linha abaixo da imagem */
+}
+
+.menu {
+    display: flex; /* Organiza links do menu em linha */
+    gap: 40px; /* Espaçamento entre os links */
+    justify-content: center; /* Centraliza horizontalmente o menu */
+    padding-top: 3px; /* Espaço interno superior */
+    padding-bottom: 20px; /* Espaço interno inferior */
+    width: 100%; /* Ocupa toda a largura do header */
+}
+
+.menu a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    text-transform: uppercase; /* Deixa letras em maiúsculas */
+    color: #333; /* Cor do texto */
+    font-weight: 500; /* Negrito médio */
+    letter-spacing: 1px; /* Espaço entre letras */
+    font-size: 14px; /* Tamanho da fonte */
+    transition: color 0.3s ease; /* Animação suave ao mudar cor */
+}
+
+.menu a:hover {
+    color: #cc60ac; /* Muda cor ao passar o mouse */
+}
+
+.imgFundo{
+background-image: url(img/capa3.png);
+background-repeat: no-repeat;background-size:cover;
+}
