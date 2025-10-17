@@ -1,0 +1,100 @@
+body {
+  margin: 0; /* Remove espaçamento padrão do navegador */
+  padding: 0; /* Remove preenchimento interno padrão */
+  height: 100vh; /* Faz o body ocupar 100% da altura da tela */
+  display: flex; /* Usa o modelo flex para alinhar os elementos */
+}
+
+/* Container principal */
+.elementos-login {
+  display: flex; /* Coloca os elementos (capa e form) lado a lado */
+  width: 100%; /* Ocupa toda a largura da tela */
+  height: 100vh; /* Ocupa toda a altura da tela */
+    
+}
+
+/* Metade esquerda: capa */
+.capa-login {
+  width: 50%; /* Ocupa metade da largura da tela */
+  height: 100%; /* Ocupa toda a altura da tela */
+  display: flex; /* Permite centralizar conteúdo dentro */
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  background-color: #f2e6dc; /* Cor de fundo caso a imagem não carregue */
+}
+
+.capa-login img {
+  width: 100%; /* Imagem ocupa toda a largura da metade esquerda */
+  height: 100%; /* Imagem ocupa toda a altura da metade esquerda */
+  object-fit: cover; /* Faz a imagem cobrir o espaço sem distorcer */
+
+}
+
+
+/* Metade direita: formulário */
+.divForm {
+  width: 50%; /* Ocupa a outra metade da tela */
+  height: 100%; /* Ocupa toda a altura da tela */
+  background-color:white; /* Cor de fundo marrom */
+  display: flex; /* Organiza o conteúdo interno com flexbox */
+  flex-direction: column; /* Alinha os itens em coluna */
+  justify-content: center; /* Centraliza o conteúdo verticalmente */
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.divForm form {
+  display: flex; /* Organiza os elementos do form em coluna */
+  flex-direction: column; /* Campos e botões um abaixo do outro */
+  width: 70%; /* Define a largura do formulário */
+  max-width: 300px; /* Limita a largura máxima */
+}
+
+.logo-login img {
+  margin-bottom: 20px; /* Espaço abaixo da logo */
+  max-width: 400px;
+
+}
+
+label {
+  color: black; /* Cor do texto dos rótulos */
+  font-weight: bold; /* Deixa o texto em negrito */
+  margin-bottom: 5px; /* Espaçamento abaixo de cada label */
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 8px; /* Espaçamento interno dos campos */
+  margin-bottom: 15px; /* Espaço entre os campos */
+  border-radius: 5px; /* Arredonda os cantos */
+}
+
+input[type="button"] {
+  background-color: #D97B66; /* Cor de fundo do botão */
+  color: black; /* Cor do texto do botão */
+  font-weight: bold; /* Deixa o texto em negrito */
+  padding: 10px; /* Espaçamento interno do botão */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para "mãozinha" */
+}
+
+input[type="button"]:hover {
+  background-color:#F2C5BB; /* Muda a cor quando o mouse passa por cima */
+}
+
+/* Responsivo: no celular a capa vai pra cima e o login pra baixo */
+@media (max-width: 768px) {
+  .elementos-login {
+    flex-direction: column; /* Coloca a capa em cima e o form embaixo */
+    height: 100vh; /* Mantém ocupando a tela toda */
+  }
+
+  .capa-login,
+  .divForm {
+    width: 100%; /* Cada um ocupa 100% da largura */
+    height: 50vh; /* Cada um ocupa metade da altura da tela */
+  }
+
+  .divForm form {
+    width: 80%; /* Aumenta um pouco a largura do form no celular */
+  }
+}
