@@ -1,14 +1,13 @@
-/* ===== ESTILO GERAL ===== */
 body {
-  background-image: url(img/capaLogin2.png);
-  background-repeat: no-repeat;
-  background-size:cover;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #ffffff; /* Fundo da página */
+  background-color: #ffffff;
+   background-image: url(img/capaLogin2.png);
+  background-repeat: no-repeat;
+  background-size:cover;
 }
 
 /* ===== CONTAINER PRINCIPAL ===== */
@@ -23,15 +22,15 @@ body {
 
 /* ===== LOGO ===== */
 .form-logo {
-  max-width: 220px;  /* Tamanho da logo */
+  max-width: 120px; /* Aumentado para destacar mais */
   height: auto;
-  margin-bottom: 10px; /* Espaço entre logo e texto Login */
+  margin-bottom: 10px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* ===== TÍTULO LOGIN ===== */
+/* ===== TÍTULO ===== */
 .tituloLogin {
   text-align: center;
   font-size: 22px;
@@ -39,7 +38,6 @@ body {
   font-weight: 600;
   margin-top: 5px;
   margin-bottom: 20px;
-  letter-spacing: 2px;
 }
 
 /* ===== FORMULÁRIO ===== */
@@ -63,7 +61,7 @@ label {
   background-color: #ffffff;
 }
 
-/* ===== BOTÃO ENTRAR ===== */
+/* ===== BOTÃO ===== */
 input[type="button"] {
   padding: 10px;
   background-color: #555;
@@ -74,7 +72,7 @@ input[type="button"] {
   margin-top: 10px;
 }
 
-/* ===== LINK CRIAR CONTA ===== */
+/* ===== TEXTO INFERIOR ===== */
 p {
   text-align: center;
   font-size: 13px;

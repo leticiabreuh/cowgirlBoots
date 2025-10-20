@@ -7,35 +7,26 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-     <div>
-        <div class="elementos-login">
-                <div class="capa-login">
-                    <img src="img/eu4.jpg" alt="">
-                </div>
-           
-                    <div class="divForm">
-                    <form action="">     
-                    <div class="logo-login">
-                        <img src="img/logo.png" alt="">
-                    </div>
+    <div class="divPrincipal">
+        <form action="" class="form">
+            <img src="img/logo.png" alt="Logo" class="form-logo">
+            <h1 class="tituloLogin">Cadastro</h1>
 
-                    <label for="">Usuário</label>
-                    <input type="text">
+            <label for="usuario">Usuário</label>
+            <input type="text" id="usuario" class="inputUsu">
 
-                    <label>Senha</label>
-                    <input type="text">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" class="inputSenha">
 
-                    <label for="">Email</label>
-                    <input type="text">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="inputUsu">
 
-                    <label>Telefone</label>
-                    <input type="text">
-                    <input type="button" value="Entrar">
-                
-                    </form>
-             </div>
-            </div>
-        </div>
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" class="inputUsu">
 
+            <input type="button" value="Cadastrar">
+            <p>Já tem uma conta? <a href="login.html">Fazer login</a></p>
+        </form>
+    </div>
 </body>
 </html>
