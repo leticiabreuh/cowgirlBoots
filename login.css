@@ -15,7 +15,7 @@ body {
 .divPrincipal {
   width: 320px;
   padding: 30px 25px;
-  background-color: #b0b3b5; /* Cinza do exemplo */
+  background-color: #F2F2E9; /* Cinza do exemplo */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -35,7 +35,7 @@ body {
 .tituloLogin {
   text-align: center;
   font-size: 22px;
-  color: white;
+  color:#e67a62;
   font-weight: 600;
   margin-top: 5px;
   margin-bottom: 20px;
@@ -52,7 +52,7 @@ body {
 
 label {
   font-size: 14px;
-  color: white;
+  color:#e67a62;
 }
 
 .inputUsu,
@@ -60,14 +60,14 @@ label {
   padding: 8px;
   border: none;
   border-radius: 4px;
-  background-color: #ffffff;
+  background-color: #e4d1cd;
 }
 
 /* ===== BOTÃO ENTRAR ===== */
 input[type="button"] {
   padding: 10px;
-  background-color: #555;
-  color: white;
+  background-color: #F2C5BB;
+  color: black;
   border: none;
   border-radius: 4px;
   cursor: pointer;

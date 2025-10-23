@@ -1,211 +1,181 @@
-/* ====== RESET E BASE ====== */
+/* ======= ESTILO GERAL ======= */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #fff;
+  background-color: #f8f8f0;
+  color: #333;
 }
 
-/* ====== CABEÇALHO ====== */
-.header {
-  background-color: #707070;
-  color: white;
+/* ======= CABEÇALHO ======= */
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
+  background-color:#B59287;
+  padding: 15px 40px;
+  border-bottom: 2px solid #ddd;
 }
 
-.logo {
-  font-weight: bold;
+.logo img {
+  height: 100px;
 }
 
-.nav a {
-  color: white;
+.header-links a {
+  margin-left: 25px;
   text-decoration: none;
-  margin-left: 20px;
-  font-size: 16px;
+  color: #222;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-.cart-icon {
-  width: 22px;
-  height: 22px;
-  vertical-align: middle;
+.header-links a:hover {
+  color:#6C3832;
 }
 
-/* ====== BANNER ====== */
-.banner {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.banner img {
+/* ======= CARROSSEL ======= */
+.carousel-wrap {
   width: 80%;
-  height: auto;
-  max-height: 220px;
-  border-radius: 6px;
-  object-fit: cover; /* Faz a imagem se ajustar ao espaço sem distorcer */
+  max-width: 1200px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
-.dots {
+.slides {
+  display: flex;
+  transition: transform 0.8s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+}
+
+.slide img {
+  width: 100%;
+  height: 500px;
+  object-fit: contain; /* Mostra a imagem inteira sem cortar nem esticar */
+  object-position: center;
+  background-color: #f8f8f0; /* cor de fundo ao redor da imagem */
+}
+
+/* ======= INDICADORES ======= */
+.indicators {
+  display: flex;
+  justify-content: center;
   margin-top: 10px;
 }
 
-.dots span {
-  display: inline-block;
-  width: 10px;
+.dot {
   height: 10px;
+  width: 10px;
   margin: 5px;
-  background-color: #aaa;
+  background-color: #B59287;
   border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* ====== CARROSSEL ====== */
-.carousel {
+.dot.active {
+  background-color: #222;
+}
+
+/* ======= BARRAS NEGRAS ======= */
+.black-bar,
+.black-bar-2 {
+  width: 150px;
+  height: 5px;
+  background-color: #000;
+  border-radius: 10px;
+  margin: 15px auto;
+}
+
+/* ======= MINIATURAS ======= */
+.thumbs-band {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 10px;
   margin: 20px 0;
 }
 
-.arrow {
-  font-size: 24px;
-  cursor: pointer;
-  color: #777;
-  user-select: none;
-}
-
-.carousel-items {
+.thumbs {
   display: flex;
   gap: 15px;
 }
 
-.item {
+.thumb {
   width: 120px;
-  height: 100px;
-  background-color: #c4c4c4;
-  border-radius: 5px;
+  height: 120px;
   overflow: hidden;
+  border-radius: 10px;
+  border: 2px solid #B59287;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.item img {
+.thumb img {
   width: 100%;
   height: 100%;
+  object-fit: contain; /* Mostra as miniaturas inteiras */
+  object-position: center;
+}
+
+/* ======= SEÇÃO DE CONTEÚDO ======= */
+.content-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 10%;
+  gap: 40px;
+}
+
+.content-left img {
+  width: 300px;
+  height: 300px;
   object-fit: cover;
+  border-radius: 15px;
 }
 
-/* ====== DESTAQUE ====== */
-.highlight {
-  text-align: center;
-  padding: 0 10%;
+.content-right {
+  max-width: 500px;
 }
 
-.highlight h2 {
+.content-right h2 {
+  color:#D2A196;
   margin-bottom: 15px;
-  border-bottom: 4px solid #000;
-  display: inline-block;
-  padding-bottom: 5px;
 }
 
-.highlight-content {
+.content-right p {
+  font-size: 1.1em;
+  line-height: 1.6em;
+}
+
+/* ======= RODAPÉ ======= */
+footer {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 15px;
+  background-color: #B59287;
+  padding: 15px 40px;
+  border-top: 2px solid #ddd;
 }
 
-.image-box {
-  width: 220px;
-  height: 130px;
-  background-color: #c4c4c4;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.image-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.text-box {
-  text-align: left;
-  max-width: 400px;
-}
-
-/* ====== RODAPÉ ====== */
-.footer {
-  background-color: #707070;
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 0;
+.footer-center {
   text-align: center;
 }
 
-.footer-section {
-  width: 100px;
-  height: 50px;
-  background-color: #999;
-  border-radius: 5px;
-  margin: 10px;
-}
-
-.social {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-  margin-top: 10px;
-}
-
-.social span {
-  font-size: 18px;
-}
-
-/* ====== RESPONSIVIDADE ====== */
-@media (max-width: 900px) {
-  .highlight-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .text-box {
-    text-align: center;
-  }
-
-  .carousel-items {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .item {
-    width: 45%;
-    height: 90px;
-  }
-}
-
-@media (max-width: 600px) {
-  .header {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
-
-  .banner img {
-    width: 95%;
-    height: auto;
-  }
-
-  .highlight {
-    padding: 0 5%;
-  }
+.icons span {
+  margin: 0 5px;
+  font-size: 1.2em;
 }
